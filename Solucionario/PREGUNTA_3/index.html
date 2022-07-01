@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pregunta 3</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha - v4.3.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="../../index.html">Grupo 6</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+         <center> <h1>Pregunta 3</h1></center>
+          
+        </div>
+        
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pregunta 3</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-12">
+            <p>
+              Desarrollar una tabla HTML según el valor de un menú desplegable, utilizando la función de JavaScript JSON.parse() para convertir texto en un objeto de JavaScript. 
+
+            </p>
+          </div>
+          
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-12">
+
+ 
+<div class="section-title mt-3">
+          <h2 > Solucion </h2>
+        </div>
+<div class="container-fluid py-1">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+           
+            <div class="card">
+              <div class="card-header">
+                Codigo
+              </div>
+              <div class="card-body">
+                <p class="card-text ">
+                  <pre class="text-left"><code>
+                    <p>&lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;P3&lt;/title&gt;<br />&lt;style&gt;<br />select, p, input {<br />font: 1em Calibri;<br />}<br />&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;p&gt;<br />&lt;input type="button" <br />style="margin:10px 0;" <br />onclick="populateSelect()" <br />value="Click para cargar el texto en el menu" /&gt;<br />&lt;/p&gt;</p>
+                    <p>&lt;!--The SELECT element.--&gt;<br />&lt;select id="sel" onchange="show(this)"&gt;<br />&lt;option value=""&gt;-- Selecciona un ave --&lt;/option&gt;<br />&lt;/select&gt;</p>
+                    <p>&lt;p id="msg"&gt;&lt;/p&gt;</p>
+                    <p><br />&lt;/body&gt;</p>
+                    <p>&lt;script&gt;<br />function populateSelect() {<br /><br />var pajaritos='[{"ID": "001","Bird_Name": "condor"},{"ID": "002","Bird_Name": "tucan"},{"ID": "003","Bird_Name": "aguila"}]';<br />var pajaros = JSON.parse(pajaritos);</p>
+                    <p>var ele = document.getElementById('sel');<br />for (var i = 0; i &lt; pajaros.length; i++) {<br />ele.innerHTML = ele.innerHTML +<br />'&lt;option value="' + pajaros[i]['ID'] + '"&gt;' + pajaros[i]['Bird_Name'] + '&lt;/option&gt;';<br />}<br />}<br />function show(ele) {<br />// Mostrar inf.<br />var msg = document.getElementById('msg');<br />msg.innerHTML = 'Pajaro seleccionado: &lt;b&gt;' + ele.options[ele.selectedIndex].text + '&lt;/b&gt; &lt;/br&gt;' +<br />'ID: &lt;b&gt;' + ele.value + '&lt;/b&gt;';<br />}</p>
+                    <p><br />&lt;/script&gt;<br />&lt;/html&gt;</p>
+                  </code></pre>
+                </p>
+                
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-6 ">
+            <div class="card  ">
+              <div class="card-header">
+                Resultado
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <!DOCTYPE html>
+<html>
+<head>
+<title>P3</title>
+<style>
+select, p, input {
+font: 1em Calibri;
+}
+</style>
+</head>
+<body>
+<p>
+<input type="button"
+style="margin:10px 0;"
+onclick="populateSelect()"
+value="Click para cargar el texto en el menu" />
+</p>
+
+<!--The SELECT element.-->
+<select id="sel" onchange="show(this)">
+<option value="">-- Selecciona un ave --</option>
+</select>
+
+<p id="msg"></p>
+
+
+</body>
+
+<script>
+function populateSelect() {
+
+var pajaritos='[{"ID": "001","Bird_Name": "condor"},{"ID": "002","Bird_Name": "tucan"},{"ID": "003","Bird_Name": "aguila"}]';
+var pajaros = JSON.parse(pajaritos);
+
+var ele = document.getElementById('sel');
+for (var i = 0; i < pajaros.length; i++) {
+ele.innerHTML = ele.innerHTML +
+'<option value="' + pajaros[i]['ID'] + '">' + pajaros[i]['Bird_Name'] + '</option>';
+}
+}
+function show(ele) {
+// Mostrar inf.
+var msg = document.getElementById('msg');
+msg.innerHTML = 'Pajaro seleccionado: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+'ID: <b>' + ele.value + '</b>';
+}
+
+
+</script>
+</html>
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <p>
+            <br>El primer parámetro de $.get()es la URL que deseamos solicitar ("https://jecabezas3.github.io/ejemplosAjax/ej1.json").
+
+            <br>El segundo parámetro es una función de devolución de llamada. El primer parámetro de devolución de llamada contiene el contenido de la página solicitada y el segundo parámetro de devolución de llamada contiene el estado de la solicitud.
+
+            <br>Sugerencia: así es como se ve el archivo JSON ("ej1.json"):
+          </p>
+          <div class="card">
+            <div class="card-body">
+              {
+                <br>"nombre": "Jhoel",
+                <br>"apellido": "Cabezas"
+                <br>}
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

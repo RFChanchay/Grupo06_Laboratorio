@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pregunta2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <p class="text-center" id="demo"></p>
+    <button type="button" class="btn btn-danger" onclick="myFunction()">Traer XML</button>
+
+  <script>
+    function myFunction() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            obtenerDatos(this);
+          }else{
+            document.getElementById("demo").innerHTML = "Error al cargar los datos";
+          }
+      };
+      xhttp.open("GET", "archivo2.xml", false);
+      xhttp.send();
+
+      
+    } 
+
+  function obtenerDatos(xml) {
+      var xmlDoc = xml.responseXML;
+      document.getElementById("demo").innerHTML = 
+      xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + "<br>" +
+      xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + "<br>" +
+      xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+  }
+  </script>
+
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
